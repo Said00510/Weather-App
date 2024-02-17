@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Api Wather App</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+
+            <nav class="nav">
+                <div class="weather bg-nav">
+                    <span style="margin-right: 7px;">
+                        <svg height="30px" width="30px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	                    viewBox="0 0 512 512"  xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:#000000;}
+                            </style>
+                            <g>
+                            <path class="st0" d="M416.296,232.076c-0.042,0-0.079,0.009-0.121,0.009c0.056-1.594,0.121-3.187,0.121-4.79
+                                c0-76.646-62.131-138.771-138.763-138.771c-71.785,0-130.854,54.521-138.03,124.419c-10.066-3.113-20.755-4.791-31.842-4.791
+                                C48.207,208.152,0,256.354,0,315.814c0,59.46,48.207,107.662,107.662,107.662h308.634c52.852,0,95.704-42.842,95.704-95.695
+                                C512,274.919,469.148,232.076,416.296,232.076z"/>
+                            </g>
+                        </svg>      
+                    </span>
+                    <p>Weather</p>
+                </div>
+        
+                <div class="form-container">
+                    <form id="form" class="form bg-nav">
+                        <button type="submit">
+                            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                            <input id="input" type="text" placeholder="Write a country or city"  required>
+                    </form>    
+                </div>
+        
+                <div class="other-container">
+                    <div class="theme bg-nav">
+                        <span>
+                            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                width="30px" height="30px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                <g>
+                                    <circle fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" cx="32.003" cy="32.005" r="16.001"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M12.001,31.997c0-2.211-1.789-4-4-4H4c-2.211,0-4,1.789-4,4
+                                        s1.789,4,4,4h4C10.212,35.997,12.001,34.208,12.001,31.997z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M12.204,46.139l-2.832,2.833c-1.563,1.562-1.563,4.094,0,5.656
+                                        c1.562,1.562,4.094,1.562,5.657,0l2.833-2.832c1.562-1.562,1.562-4.095,0-5.657C16.298,44.576,13.767,44.576,12.204,46.139z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M32.003,51.999c-2.211,0-4,1.789-4,4V60c0,2.211,1.789,4,4,4
+                                        s4-1.789,4-4l-0.004-4.001C36.003,53.788,34.21,51.999,32.003,51.999z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M51.798,46.143c-1.559-1.566-4.091-1.566-5.653-0.004
+                                        s-1.562,4.095,0,5.657l2.829,2.828c1.562,1.57,4.094,1.562,5.656,0s1.566-4.09,0-5.656L51.798,46.143z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M60.006,27.997l-4.009,0.008
+                                        c-2.203-0.008-3.992,1.781-3.992,3.992c-0.008,2.211,1.789,4,3.992,4h4.001c2.219,0.008,4-1.789,4-4
+                                        C64.002,29.79,62.217,27.997,60.006,27.997z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M51.798,17.859l2.828-2.829c1.574-1.566,1.562-4.094,0-5.657
+                                        c-1.559-1.567-4.09-1.567-5.652-0.004l-2.829,2.836c-1.562,1.555-1.562,4.086,0,5.649C47.699,19.426,50.239,19.418,51.798,17.859z"
+                                        />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M32.003,11.995c2.207,0.016,4-1.789,4-3.992v-4
+                                        c0-2.219-1.789-4-4-4c-2.211-0.008-4,1.781-4,3.993l0.008,4.008C28.003,10.206,29.792,11.995,32.003,11.995z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" fill="#231F20" d="M12.212,17.855c1.555,1.562,4.079,1.562,5.646-0.004
+                                        c1.574-1.551,1.566-4.09,0.008-5.649l-2.829-2.828c-1.57-1.571-4.094-1.559-5.657,0c-1.575,1.559-1.575,4.09-0.012,5.653
+                                        L12.212,17.855z"/>
+                                </g>
+                            </svg>
+                        </span>
+                    </div>
+                    
+                    <div class="support bg-nav">
+                            <a href="">
+                                <svg width="30px" height="30px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#000000">
+                                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]">
+                                            </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                Support Project
+                            </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="error">
+                <p>Error can't find that country</p>
+            </div>
+        </header>
+
+        <main id="main">
+            <h1>Today Overview</h1>
+            <section id="result">
+                <div class="container">
+                    <article id="info-weather-article" class="big">
+
+                    </article>
+
+                    <article class="small weather-wrapper">
+                        <div class="weather-title">
+                            <span style="display: flex; align-items: center;">
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.7639 7C16.3132 6.38625 17.1115 6 18 6C19.6569 6 21 7.34315 21 9C21 10.6569 19.6569 12 18 12H3M8.50926 4.66667C8.87548 4.2575 9.40767 4 10 4C11.1046 4 12 4.89543 12 6C12 7.10457 11.1046 8 10 8H3M11.5093 19.3333C11.8755 19.7425 12.4077 20 13 20C14.1046 20 15 19.1046 15 18C15 16.8954 14.1046 16 13 16H3" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <h2>Wind speed</h2>
+                        </div>
+                        <div class="weather-info">
+                            <p id="wind-speed"></p>
+                        </div>
+                    </article>
+
+                    <article class="small weather-wrapper">
+                        <div class="weather-title">
+                            <span style="display: flex; align-items: center;">
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <h2>Visibility</h2>
+                        </div>
+
+                        <div class="weather-info">
+                            <p id="visibility"></p>
+                        </div>
+                    </article>
+
+                    <article class="small weather-wrapper">
+                        <div class="weather-title">
+                            <span style="display: flex; align-items: center;">
+                                <svg width="20px" height="20px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Dribbble-Light-Preview" transform="translate(-65.000000, -4919.000000)" fill="#000000">
+                                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                <path d="M14,4777 C12.346,4777 11,4775.654 11,4774 C11,4772.698 11.839,4771.599 13,4771.184 L13,4769.101 L13,4769 L15,4769 L15,4769.101 L15,4771.184 C16.161,4771.599 17,4772.698 17,4774 C17,4775.654 15.654,4777 14,4777 L14,4777 Z M13,4767 L15,4767 L15,4765 L13,4765 L13,4767 Z M13,4763 L15,4763 L15,4761 L13,4761 L13,4763 Z M17,4770.023 L17,4759 L11,4759 L11,4770.023 C9.792,4770.935 9,4772.37 9,4774 C9,4776.761 11.239,4779 14,4779 C16.761,4779 19,4776.761 19,4774 C19,4772.37 18.208,4770.935 17,4770.023 L17,4770.023 Z" id="thermometer-[#748]">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <h2 >Sensation</h2>
+                        </div>
+
+                        <div class="weather-info">
+                            <p id="sensation"></p>
+                        </div>
+                    </article>
+
+                    <article class="small weather-wrapper">
+                        <div class="weather-title">
+                            <span style="display: flex; align-items: center;">
+                                <svg fill="#000000" width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,22c2.579,0,4-1.35,4-3.8,0-3.243-3.237-5.871-3.375-5.981a1,1,0,0,0-1.25,0C11.237,12.329,8,14.957,8,18.2,8,20.65,9.421,22,12,22Zm0-7.639A6.153,6.153,0,0,1,14,18.2c0,1.112-.335,1.8-2,1.8s-2-.688-2-1.8A6.153,6.153,0,0,1,12,14.361ZM6.625,2.219a1,1,0,0,0-1.25,0C5.237,2.329,2,4.957,2,8.2,2,10.65,3.421,12,6,12s4-1.35,4-3.8C10,4.957,6.763,2.329,6.625,2.219ZM6,10c-1.665,0-2-.688-2-1.8A6.153,6.153,0,0,1,6,4.361,6.153,6.153,0,0,1,8,8.2C8,9.312,7.665,10,6,10ZM18.625,2.219a1,1,0,0,0-1.25,0C17.237,2.329,14,4.957,14,8.2c0,2.45,1.421,3.8,4,3.8s4-1.35,4-3.8C22,4.957,18.763,2.329,18.625,2.219ZM18,10c-1.665,0-2-.688-2-1.8a6.153,6.153,0,0,1,2-3.839A6.153,6.153,0,0,1,20,8.2C20,9.312,19.665,10,18,10Z"/></svg>
+                            </span>
+                            <h2>Humidity</h2>
+                        </div>
+
+                        <div class="weather-info">
+                            <p id="humidity"></p>
+                        </div>
+                    </article>
+
+                    <article class="small">
+                        <div class="weather-title">
+                            <span style="display: flex; align-items: center;">
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <h2>UV Index</h2>
+                        </div>
+
+                        <div class="weather-info">
+                            <p id="uv"></p>
+                        </div>
+                    </article>
+
+                    <article class="small">
+                        <div class="weather-title">
+                            <span style="display: flex; align-items: center;">
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.38846 12.7023C3.98522 12.1237 3 10.7636 3 9.17807C3 7.42863 4.3 5.8125 6.25 5.5C6.86168 4.0617 8.30934 3 9.9978 3C12.1607 3 13.9285 4.65893 14.05 6.75C14.8721 7.10549 15.5169 7.83126 15.8166 8.69914M5.38846 12.7023C4.50928 13.5938 4 14.7867 4 16.0315C4 18.7755 6.28335 21 9.1 21L16.75 21C19.0972 21 21 19.1279 21 16.8185C21 15.1039 19.951 13.5202 18.45 12.875C18.3457 11.0905 17.3135 9.5483 15.8166 8.69914M5.38846 12.7023C6.11557 11.9651 7.0957 11.4339 8.25 11.25C9.04989 9.3802 10.943 8 13.151 8C14.1227 8 15.0333 8.25474 15.8166 8.69914" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <h2>Cover</h2>
+                        </div>
+
+                        <div class="weather-info">
+                            <p id="cloud"></p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

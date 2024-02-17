@@ -8,20 +8,34 @@ const main = document.getElementById('main'),
       humidity = document.getElementById('humidity'),
       uvIndex = document.getElementById('uv'),
       cloud = document.getElementById('cloud'),
-      error = document.querySelector('.error')
+      error = document.querySelector('.error'),
+      btnSubmit = document.getElementById('submit')
 
 //API
 let div;
 let timeZone;
+//Almacenar valor para evitar peticion doble
+let cache = {}
 
 form.addEventListener('submit', (e) => drawWeather(e))
 
 async function drawWeather(e) {
     e.preventDefault()
     const { value } = input
-    const respuesta = await fetching(value)
-    timeZone = await respuesta.dates.location.tz_id
-    actualizaReloj();
+    let response
+
+
+    if(cache[value]){
+        return cache[value]
+    } else{
+        input.setAttribute('disabled', '')
+        response = await fetching(value)
+        input.removeAttribute('disabled')
+        cache[value] = value;  
+    }
+
+    timeZone = await response.dates.location.tz_id
+    updateReloj();
 
 }
 
@@ -98,7 +112,7 @@ function addZero(i) {
     return i;
   }
 
-function actualizaReloj() {
+function updateReloj() {
     const time = document.getElementById('time')
     const horaActual = new Date();
   
@@ -114,7 +128,7 @@ function actualizaReloj() {
     }
 
   }
-  
-  setInterval(actualizaReloj, 1000);
+
+  setInterval(updateReloj, 1000);
 
   

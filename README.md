@@ -29,6 +29,7 @@ En el futuro, planeamos realizar las siguientes mejoras:
 - Mejorar la interfaz de usuario para que sea más intuitiva y atractiva.
 - Añadir nuevas funcionalidades, como la posibilidad de ver el pronóstico extendido, cambiar unidades de temperatura, etc.
 - Optimizar el rendimiento de la aplicación para una experiencia más rápida y fluida.
+- Añadir modo oscuro.
 
 ## Notas Adicionales
 
